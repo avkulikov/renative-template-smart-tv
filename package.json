@@ -1,0 +1,37 @@
+{
+    "name": "renative-template-smart-tv",
+    "version": "0.1.0",
+    "description": "🚀🚀🚀 Build universal cross-platform apps with React Native. Includes latest `Android TV`, `Web`, `Tizen TV`, `LG webOS` platforms",
+    "keywords": [
+        "android tv",
+        "boilerplate",
+        "cocoapods",
+        "cross-platform",
+        "lg",
+        "multiplatform",
+        "react",
+        "react-native",
+        "smart tv",
+        "template",
+        "tizen",
+        "web",
+        "webos"
+    ],
+    "homepage": "https://github.com/avkulikov/renative-template-smart-tv#readme",
+    "bugs": {
+        "url": "https://github.com/avkulikov/renative-template-smart-tv/issues"
+    },
+    "license": "MIT",
+    "author": "Artem Kulikov <artem.job.kulikov@gmail.com> (https://github.com/avkulikov)",
+    "contributors": [],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/avkulikov/renative-template-smart-tv.git"
+    },
+    "scripts": {},
+    "private": false,
+    "publishConfig": {
+        "access": "public"
+    },
+    "title": "SmartTV ReNative Template"
+}

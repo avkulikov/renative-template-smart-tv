@@ -1,0 +1,43 @@
+{
+    "defaults": {
+        "supportedPlatforms": ["androidtv", "web", "tizen", "webos"]
+    },
+    "engines": {
+        "@rnv/engine-rn": "source:rnv",
+        "@rnv/engine-rn-web": "source:rnv"
+    },
+    "plugins": {
+        "renative": "source:rnv",
+        "react-native-web-image-loader": "source:rnv"
+    },
+    "permissions": {
+        "ios": {},
+        "android": {
+            "INTERNET": {
+                "key": "android.permission.INTERNET",
+                "security": "normal"
+            },
+            "SYSTEM_ALERT_WINDOW": {
+                "key": "android.permission.SYSTEM_ALERT_WINDOW",
+                "security": "signature"
+            }
+        }
+    },
+    "platforms": {
+        "androidtv": {
+            "gradle.properties": {
+                "android.useDeprecatedNdk": true
+            },
+            "AndroidManifest": {
+                "children": [
+                    {
+                        "tag": "application",
+                        "android:name": ".MainApplication",
+                        "android:usesCleartextTraffic": true,
+                        "tools:targetApi": 25
+                    }
+                ]
+            }
+        }
+    }
+}

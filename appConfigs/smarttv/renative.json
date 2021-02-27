@@ -1,0 +1,100 @@
+{
+    "id": "smart-tv",
+    "common": {
+        "id": "renative.smarttv",
+        "title": "ReNative SmartTV",
+        "description": "Cross-platform application project based on ReNative",
+        "author": "Artem Kulikov <artem.job.kulikov@gmail.com> (https://github.com/avkulikov)",
+        "license": "MIT",
+        "includedPlugins": ["*"],
+        "includedFonts": ["*"],
+        "buildSchemes": {
+            "debug": {
+                "description": "Use for local development"
+            },
+            "test": {
+                "description": "Use to run automation"
+            },
+            "release": {
+                "description": "Use for production deployments"
+            }
+        },
+        "backgroundColor": "#111111",
+        "runtime": {
+            "welcomeMessage": "Hello ReNative!"
+        }
+    },
+    "platforms": {
+        "androidtv": {
+            "entryFile": "index.androidtv",
+            "reactNativeEngine": "hermes",
+            "multipleAPKs": false,
+            "minSdkVersion": 25,
+            "permissions": ["*"],
+            "buildSchemes": {
+                "debug": {
+                    "signingConfig": "Debug",
+                    "bundleAssets": false
+                },
+                "test": {
+                    "signingConfig": "Debug",
+                    "bundleAssets": true
+                },
+                "release": {
+                    "signingConfig": "Release",
+                    "multipleAPKs": true,
+                    "bundleAssets": true,
+                    "bundleIsDev": false
+                }
+            }
+        },
+        "tizen": {
+            "appName": "RNVanillaTV",
+            "entryFile": "index.tizen",
+            "certificateProfile": "RNVanillaCert",
+            "buildSchemes": {
+                "debug": {
+                    "bundleAssets": false
+                },
+                "release": {
+                    "bundleAssets": true,
+                    "bundleIsDev": false
+                }
+            }
+        },
+        "web": {
+            "entryFile": "index.web",
+            "pagesDir": "src/pages",
+            "devServerHost": "0.0.0.0",
+            "webpackConfig": {
+                "baseUrl": ""
+            },
+            "buildSchemes": {
+                "debug": {
+                    "bundleAssets": false,
+                    "environment": "development"
+                },
+                "release": {
+                    "bundleAssets": true,
+                    "bundleIsDev": false,
+                    "environment": "production"
+                }
+            },
+            "deploy": {
+                "type": "none"
+            }
+        },
+        "webos": {
+            "entryFile": "index.webos",
+            "buildSchemes": {
+                "debug": {
+                    "bundleAssets": false
+                },
+                "release": {
+                    "bundleAssets": true,
+                    "bundleIsDev": false
+                }
+            }
+        }
+    }
+}
